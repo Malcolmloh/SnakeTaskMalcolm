@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73B1F122-2FE6-4C22-BE4B-2A697364CD3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Snake</RootNamespace>
+    <AssemblyName>Snake</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharSelect.Designer.cs">
+      <DependentUpon>CharSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DifficultySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DifficultySelect.Designer.cs">
+      <DependentUpon>DifficultySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="nameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nameForm.Designer.cs">
+      <DependentUpon>nameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rewards.cs" />
+    <Compile Include="ScoreboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreboardForm.Designer.cs">
+      <DependentUpon>ScoreboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Traps.cs" />
+    <EmbeddedResource Include="CharSelect.resx">
+      <DependentUpon>CharSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DifficultySelect.resx">
+      <DependentUpon>DifficultySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nameForm.resx">
+      <DependentUpon>nameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreboardForm.resx">
+      <DependentUpon>ScoreboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greysquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orangecircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowcircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_eatfruit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_ash.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ashketchum.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemon10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masterball.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masterball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl1bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl2bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl3bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl4bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl5bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenubg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lily.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoshuaMcLean_Mountain_Trials NO COPYRIGHT_8bit_Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoshuaMcLean_MountainTrial_NOCOPYRIGHT_8bit_Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JeremyKorpas_SourRock_NOCOPYRIGHT_8bit_Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JeremyKorpas_SourRock.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Capture_Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameoverbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spikeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameoversound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\difficultyselectbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\easymode.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalmode.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hardmode.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
