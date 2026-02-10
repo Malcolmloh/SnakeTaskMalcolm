@@ -26,8 +26,11 @@ namespace Snake
             wplayer.controls.stop();
             this.Hide();
             selectScreen.ShowDialog();
-            wplayer.controls.play();
-            this.Show(); // Show Menu again after they finish playing
+            if (GameSettings.IsMuted == false)
+            {
+                wplayer.controls.play();
+            }
+            this.Show();
         }
 
         private void optionsBTN_Click(object sender, EventArgs e)
@@ -50,31 +53,29 @@ namespace Snake
         }
         private void playBackgroundMusic()
         {
-            // Define a temporary path on the computer
             string tempFile = Path.Combine(Path.GetTempPath(), "sourrock.wav");
 
-            // Write the music resource to that file (Create it if it doesn't exist)
             if (!File.Exists(tempFile))
             {
-                // 1. Get the resource stream
                 using (System.IO.Stream stream = Properties.Resources.JeremyKorpas_SourRock)
                 {
-                    // 2. Create a byte array to hold the data (size based on stream length)
                     byte[] bytes = new byte[stream.Length];
 
-                    // 3. Read the stream data into the byte array
                     stream.Read(bytes, 0, bytes.Length);
 
-                    // 4. Now you can write the bytes to the file
                     File.WriteAllBytes(tempFile, bytes);
                 }
             }
 
-            // Configure WMP to play that file
+            
             wplayer.URL = tempFile;
-            wplayer.settings.setMode("loop", true); // Enable Looping
-            wplayer.settings.volume = 50; // Optional: Lower volume so SFX are louder
-            wplayer.controls.play();
+            wplayer.settings.setMode("loop", true);
+            wplayer.settings.volume = 50;
+
+            if (GameSettings.IsMuted == false)
+            {
+                wplayer.controls.play();
+            }
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -98,6 +99,30 @@ namespace Snake
             this.Hide();
             sb.ShowDialog();
             this.Show();
+        }
+
+        private void titleLBL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void muteBTN_Click(object sender, EventArgs e)
+        {
+            // 1. Toggle the global setting
+            GameSettings.IsMuted = !GameSettings.IsMuted;
+
+            // 2. Apply it immediately to the Menu music
+            if (GameSettings.IsMuted)
+            {
+                wplayer.controls.stop();
+                muteBTN.Text = "Unmute";
+            }
+            else
+            {
+                wplayer.controls.play();
+                muteBTN.Text = "Mute";
+            }
+            this.Focus();
         }
     }
 }

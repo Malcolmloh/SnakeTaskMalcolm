@@ -54,6 +54,7 @@ namespace Snake
         {
             GameSettings.SpeedInterval = 1000; // Slow
             GameSettings.SpikeCount = 3;
+            GameSettings.PointsPerReward = 25;
             Form1 game = new Form1();
             this.Hide();
             game.ShowDialog();
@@ -64,6 +65,7 @@ namespace Snake
         {
             GameSettings.SpeedInterval = 500; // Normal speed
             GameSettings.SpikeCount = 7;
+            GameSettings.PointsPerReward = 50;
             Form1 game = new Form1();
             this.Hide();
             game.ShowDialog();
@@ -72,8 +74,9 @@ namespace Snake
 
         private void hardBTN_Click(object sender, EventArgs e)
         {
-            GameSettings.SpeedInterval = 250; // Very fast
+            GameSettings.SpeedInterval = 300; // Very fast
             GameSettings.SpikeCount = 15;
+            GameSettings.PointsPerReward = 100;
             Form1 game = new Form1();
             this.Hide();
             game.ShowDialog();

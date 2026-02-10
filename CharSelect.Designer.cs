@@ -33,6 +33,7 @@
             this.selectAshBTN = new System.Windows.Forms.Button();
             this.selectLilyBTN = new System.Windows.Forms.Button();
             this.backtomenuBTN = new System.Windows.Forms.Button();
+            this.titleLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +43,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::Snake.Properties.Resources.Ash;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(161, 131);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(234, 301);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,7 +54,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Snake.Properties.Resources.Lily;
-            this.pictureBox2.Location = new System.Drawing.Point(432, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(592, 147);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 301);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,9 +64,10 @@
             // selectAshBTN
             // 
             this.selectAshBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.selectAshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectAshBTN.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectAshBTN.ForeColor = System.Drawing.Color.White;
-            this.selectAshBTN.Location = new System.Drawing.Point(162, 319);
+            this.selectAshBTN.Location = new System.Drawing.Point(205, 454);
             this.selectAshBTN.Name = "selectAshBTN";
             this.selectAshBTN.Size = new System.Drawing.Size(163, 49);
             this.selectAshBTN.TabIndex = 2;
@@ -76,9 +78,10 @@
             // selectLilyBTN
             // 
             this.selectLilyBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.selectLilyBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectLilyBTN.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectLilyBTN.ForeColor = System.Drawing.Color.White;
-            this.selectLilyBTN.Location = new System.Drawing.Point(468, 319);
+            this.selectLilyBTN.Location = new System.Drawing.Point(627, 454);
             this.selectLilyBTN.Name = "selectLilyBTN";
             this.selectLilyBTN.Size = new System.Drawing.Size(163, 49);
             this.selectLilyBTN.TabIndex = 3;
@@ -89,9 +92,10 @@
             // backtomenuBTN
             // 
             this.backtomenuBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.backtomenuBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backtomenuBTN.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backtomenuBTN.ForeColor = System.Drawing.Color.White;
-            this.backtomenuBTN.Location = new System.Drawing.Point(301, 391);
+            this.backtomenuBTN.Location = new System.Drawing.Point(403, 535);
             this.backtomenuBTN.Name = "backtomenuBTN";
             this.backtomenuBTN.Size = new System.Drawing.Size(190, 36);
             this.backtomenuBTN.TabIndex = 6;
@@ -99,12 +103,27 @@
             this.backtomenuBTN.UseVisualStyleBackColor = false;
             this.backtomenuBTN.Click += new System.EventHandler(this.backtomenuBTN_Click);
             // 
+            // titleLBL
+            // 
+            this.titleLBL.AutoSize = true;
+            this.titleLBL.BackColor = System.Drawing.Color.Transparent;
+            this.titleLBL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titleLBL.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLBL.ForeColor = System.Drawing.Color.LightGreen;
+            this.titleLBL.Location = new System.Drawing.Point(81, 41);
+            this.titleLBL.Name = "titleLBL";
+            this.titleLBL.Size = new System.Drawing.Size(797, 74);
+            this.titleLBL.TabIndex = 7;
+            this.titleLBL.Text = "CHOOSE YOUR CHARACTER";
+            this.titleLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CharSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Snake.Properties.Resources.lvl5bg;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(980, 596);
+            this.Controls.Add(this.titleLBL);
             this.Controls.Add(this.backtomenuBTN);
             this.Controls.Add(this.selectLilyBTN);
             this.Controls.Add(this.selectAshBTN);
@@ -116,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,5 +146,6 @@
         private System.Windows.Forms.Button selectAshBTN;
         private System.Windows.Forms.Button selectLilyBTN;
         private System.Windows.Forms.Button backtomenuBTN;
+        private System.Windows.Forms.Label titleLBL;
     }
 }

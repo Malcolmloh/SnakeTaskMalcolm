@@ -13,7 +13,7 @@ namespace Snake
         Board mainBoard;
         System.Media.SoundPlayer captureMusic;
 
-        // Create the Random object HERE, once.
+        
         Random rng = new Random();
 
         public Rewards(int size, Board mainBoard, Traps existingTraps)
@@ -90,9 +90,12 @@ namespace Snake
                     pokeballList[i].getColNo() == p.getColNo())
                 {
                     pokeballList.RemoveAt(i); // Remove the eaten pokeball
-                    captureMusic = new System.Media.SoundPlayer(Properties.Resources.Pokemon_Capture_Sound);
-                    captureMusic.Play();
-                    return 50; // Return points
+                    if (GameSettings.IsMuted == false)
+                    {
+                        captureMusic = new System.Media.SoundPlayer(Properties.Resources.Pokemon_Capture_Sound);
+                        captureMusic.Play();
+                    }
+                    return GameSettings.PointsPerReward; // Return points based on difficulty selected
                 }
             }
             return 0;

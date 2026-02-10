@@ -76,6 +76,7 @@
             // normalBTN
             // 
             this.normalBTN.BackColor = System.Drawing.Color.DimGray;
+            this.normalBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.normalBTN.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.normalBTN.ForeColor = System.Drawing.Color.White;
             this.normalBTN.Location = new System.Drawing.Point(297, 323);
@@ -90,6 +91,7 @@
             // hardBTN
             // 
             this.hardBTN.BackColor = System.Drawing.Color.DimGray;
+            this.hardBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hardBTN.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hardBTN.ForeColor = System.Drawing.Color.White;
             this.hardBTN.Location = new System.Drawing.Point(533, 323);
@@ -104,6 +106,7 @@
             // easyBTN
             // 
             this.easyBTN.BackColor = System.Drawing.Color.DimGray;
+            this.easyBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.easyBTN.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.easyBTN.ForeColor = System.Drawing.Color.White;
             this.easyBTN.Location = new System.Drawing.Point(59, 323);
@@ -118,6 +121,7 @@
             // backtomenuBTN
             // 
             this.backtomenuBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.backtomenuBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backtomenuBTN.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backtomenuBTN.ForeColor = System.Drawing.Color.White;
             this.backtomenuBTN.Location = new System.Drawing.Point(323, 402);

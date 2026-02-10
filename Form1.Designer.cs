@@ -62,6 +62,7 @@
             this.controlPanel.Controls.Add(this.leftBTN);
             this.controlPanel.Controls.Add(this.downBTN);
             this.controlPanel.Controls.Add(this.rightBTN);
+            this.controlPanel.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlPanel.Location = new System.Drawing.Point(0, 130);
             this.controlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlPanel.Name = "controlPanel";
@@ -71,10 +72,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(62, 21);
             this.label2.TabIndex = 27;
             this.label2.Text = "Level";
             // 
@@ -82,20 +83,20 @@
             // 
             this.levelLBL.AutoSize = true;
             this.levelLBL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.levelLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelLBL.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelLBL.Location = new System.Drawing.Point(96, 20);
             this.levelLBL.Name = "levelLBL";
-            this.levelLBL.Size = new System.Drawing.Size(19, 19);
+            this.levelLBL.Size = new System.Drawing.Size(20, 23);
             this.levelLBL.TabIndex = 26;
             this.levelLBL.Text = "1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 25;
             this.label1.Text = "Score";
             // 
@@ -103,16 +104,17 @@
             // 
             this.scoreLBL.AutoSize = true;
             this.scoreLBL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLBL.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLBL.Location = new System.Drawing.Point(96, 48);
             this.scoreLBL.Name = "scoreLBL";
-            this.scoreLBL.Size = new System.Drawing.Size(19, 19);
+            this.scoreLBL.Size = new System.Drawing.Size(23, 23);
             this.scoreLBL.TabIndex = 24;
             this.scoreLBL.Text = "0";
             // 
             // pauseBTN
             // 
             this.pauseBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.pauseBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pauseBTN.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pauseBTN.ForeColor = System.Drawing.Color.White;
             this.pauseBTN.Location = new System.Drawing.Point(612, 55);
@@ -127,6 +129,7 @@
             // startBTN
             // 
             this.startBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.startBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startBTN.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startBTN.ForeColor = System.Drawing.Color.White;
             this.startBTN.Location = new System.Drawing.Point(612, 20);
@@ -141,10 +144,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
+            this.label3.Size = new System.Drawing.Size(67, 21);
             this.label3.TabIndex = 21;
             this.label3.Text = "Timer";
             // 
@@ -162,10 +165,10 @@
             // 
             this.timerLBL.AutoSize = true;
             this.timerLBL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.timerLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLBL.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLBL.Location = new System.Drawing.Point(96, 76);
             this.timerLBL.Name = "timerLBL";
-            this.timerLBL.Size = new System.Drawing.Size(19, 19);
+            this.timerLBL.Size = new System.Drawing.Size(23, 23);
             this.timerLBL.TabIndex = 20;
             this.timerLBL.Text = "0";
             // 
@@ -173,6 +176,7 @@
             // 
             this.upBTN.BackgroundImage = global::Snake.Properties.Resources.arrowkeyup;
             this.upBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.upBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.upBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upBTN.Location = new System.Drawing.Point(409, 2);
             this.upBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,6 +190,7 @@
             // 
             this.leftBTN.BackgroundImage = global::Snake.Properties.Resources.arrowkeyleft;
             this.leftBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.leftBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leftBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leftBTN.ForeColor = System.Drawing.SystemColors.ControlText;
             this.leftBTN.Location = new System.Drawing.Point(348, 38);
@@ -200,6 +205,7 @@
             // 
             this.downBTN.BackgroundImage = global::Snake.Properties.Resources.arrowkeydown;
             this.downBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.downBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downBTN.Location = new System.Drawing.Point(409, 76);
             this.downBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -213,6 +219,7 @@
             // 
             this.rightBTN.BackgroundImage = global::Snake.Properties.Resources.arrowkeyright;
             this.rightBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.rightBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rightBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rightBTN.Location = new System.Drawing.Point(475, 38);
             this.rightBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -234,6 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(769, 252);
             this.Controls.Add(this.boardPanel);
             this.Controls.Add(this.controlPanel);

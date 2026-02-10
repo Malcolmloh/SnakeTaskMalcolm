@@ -44,6 +44,7 @@
             this.scoreListBox.Name = "scoreListBox";
             this.scoreListBox.Size = new System.Drawing.Size(376, 490);
             this.scoreListBox.TabIndex = 0;
+            this.scoreListBox.SelectedIndexChanged += new System.EventHandler(this.scoreListBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -59,6 +60,7 @@
             // 
             // backBTN
             // 
+            this.backBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBTN.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBTN.Location = new System.Drawing.Point(286, 7);
             this.backBTN.Name = "backBTN";

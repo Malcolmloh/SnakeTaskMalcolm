@@ -38,17 +38,13 @@ namespace Snake
             this.AutoSize = true;
             boardPanel.AutoSize = true;
 
-            // 2. CRITICAL FIX: Create the Board FIRST. 
-            // The Player needs the board to know where walls are.
             mainBoard = new Board(this);
 
-            // 3. Load Character from Settings
             this.character = GameSettings.SelectedChar;
             myPlayer = new Player(mainBoard, this.character);
 
-            // 4. Setup Timer using GameSettings
             clock = new Timer();
-            clock.Interval = GameSettings.SpeedInterval; // Read speed from settings
+            clock.Interval = GameSettings.SpeedInterval; 
             clock.Tick += new EventHandler(refresh);
 
             duration = 0;
@@ -57,14 +53,13 @@ namespace Snake
             mode = "REST";
             modeLBL.Text = mode;
 
-            // 5. Start Music & Level 1
             playBackgroundMusic();
             gotoNextLevel(level);
         }
 
         private void gotoNextLevel(int nextLevel)
         {
-            if (nextLevel > 1) // Only play sound if levelling up (not at start)
+            if (nextLevel > 1 && GameSettings.IsMuted == false)
             {
                 levelup = new System.Media.SoundPlayer(Properties.Resources.levelup);
                 levelup.Play();
@@ -72,10 +67,9 @@ namespace Snake
 
             mode = "REST";
 
-            // Re-create objects for the new level
             myPlayer = new Player(mainBoard, this.character);
-            myTraps = new Traps(nextLevel, mainBoard); // Create Traps
-            pokeballs = new Rewards(nextLevel, mainBoard, myTraps); // Pass Traps to Rewards
+            myTraps = new Traps(nextLevel, mainBoard); 
+            pokeballs = new Rewards(nextLevel, mainBoard, myTraps); 
 
             mainBoard.changeBackground(nextLevel);
         }
@@ -131,8 +125,18 @@ namespace Snake
             clock.Stop();
             wplayer.controls.stop();
 
-            gameoversound = new System.Media.SoundPlayer(Properties.Resources.gameoversound);
-            gameoversound.Play();
+            if (GameSettings.IsMuted == false)
+            {
+                gameoversound = new System.Media.SoundPlayer(Properties.Resources.gameoversound);
+                gameoversound.Play();
+            }
+
+            if (this.level > GameSettings.SessionHighestLevel)
+            {
+                GameSettings.SessionHighestLevel = this.level;
+            }
+
+            GameSettings.SessionTotalTimeSeconds += (this.duration / 1000);
 
             nameForm inputForm = new nameForm();
             if (inputForm.ShowDialog() == DialogResult.OK)
@@ -170,7 +174,6 @@ namespace Snake
         private void startBTN_Click(object sender, EventArgs e) { clock.Start(); }
         private void pauseBTN_Click(object sender, EventArgs e) { clock.Stop(); }
 
-        // Unused buttons (can keep empty or delete)
         private void upBTN_Click(object sender, EventArgs e) { mode = "UP"; }
         private void downBTN_Click(object sender, EventArgs e) { mode = "DOWN"; }
         private void leftBTN_Click(object sender, EventArgs e) { mode = "LEFT"; }
@@ -198,7 +201,10 @@ namespace Snake
             wplayer.URL = tempFile;
             wplayer.settings.setMode("loop", true);
             wplayer.settings.volume = 50;
-            wplayer.controls.play();
+            if (GameSettings.IsMuted == false)
+            {
+                wplayer.controls.play();
+            }
         }
     }
 }

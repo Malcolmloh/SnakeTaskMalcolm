@@ -15,5 +15,13 @@ namespace Snake
         public static int SpikeCount;
 
         public static string SelectedChar;
+
+        public static int SessionHighestLevel = 1; // Tracks max level reached
+
+        public static int SessionTotalTimeSeconds = 0; // Tracks total play time
+
+        public static int PointsPerReward;
+
+        public static bool IsMuted = false;
     }
 }
